@@ -1,0 +1,36 @@
+name: Generate Team Badges
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "badge-generator/**"
+      - "profile/README.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-badges:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+          cache: false
+
+      - name: Generate SVG badges
+        run: cd badge-generator && go run main.go
+
+      - name: Commit generated badges
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add profile/badges/
+          git diff --staged --quiet || git commit -m "chore: regenerate team badges [skip ci]"
+          git push

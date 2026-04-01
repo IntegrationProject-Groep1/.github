@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="191" height="20" role="img" aria-label="Facturatie: FOSSBilling · :80">
+  <title>Facturatie: FOSSBilling · :80</title>
+  <linearGradient id="s" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="r">
+    <rect width="191" height="20" rx="3" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#r)">
+    <rect width="191" height="20" fill="#2D3748"/>
+    <rect x="74" width="117" height="20" fill="#E63946"/>
+    <rect width="191" height="20" fill="url(#s)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+    <text aria-hidden="true" x="37.5" y="15" fill="#010101" fill-opacity=".3">Facturatie</text>
+    <text x="37.0" y="14">Facturatie</text>
+    <text aria-hidden="true" x="133.0" y="15" fill="#010101" fill-opacity=".3">FOSSBilling · :80</text>
+    <text x="132.5" y="14">FOSSBilling · :80</text>
+  </g>
+</svg>
